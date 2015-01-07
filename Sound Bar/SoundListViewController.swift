@@ -25,7 +25,8 @@ class SoundListViewController: UIViewController, UITableViewDelegate, UITableVie
         //the data for app is coming from this viewcontroller
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        UINavigationBar.appearance().backgroundColor = UIColor.lightGrayColor()
+        
+        
 
     }
     
@@ -46,25 +47,36 @@ class SoundListViewController: UIViewController, UITableViewDelegate, UITableVie
         return true
     }
     
+    //deleting a row in the table view
    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
-        
+     var context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
+    
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-           self.sounds.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+          // delete the object inside of context data
+            context.deleteObject(self.sounds[indexPath.row])
+            self.viewWillAppear(Bool())
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
         }
     }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.sounds.count
     }
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //going to pass where ever the person touches in the index of the row
+        
         var sound = self.sounds[indexPath.row]
-        var cell = UITableViewCell()
-        cell.textLabel.text = sound.name
-        return cell
+        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
+        if !(cell != nil) {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")}
+            
+        cell!.textLabel.text = sound.name
+        return cell!
+        
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
