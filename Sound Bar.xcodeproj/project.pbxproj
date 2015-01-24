@@ -18,6 +18,7 @@
 		88D404831A58AD45007FC77C /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D404781A58AD45007FC77C /* Icon-76.png */; };
 		88D404841A58AD45007FC77C /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D404791A58AD45007FC77C /* Icon-76@2x.png */; };
 		88D404851A58AD45007FC77C /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D4047A1A58AD45007FC77C /* iTunesArtwork@2x.png */; };
+		88D6EDE11A6787B1001BCF0D /* SoundBoard backbacground.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D6EDE01A6787B1001BCF0D /* SoundBoard backbacground.png */; };
 		88EB90FB1A44B7350019442B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB90FA1A44B7350019442B /* AppDelegate.swift */; };
 		88EB90FE1A44B7350019442B /* Sound_Bar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88EB90FC1A44B7350019442B /* Sound_Bar.xcdatamodeld */; };
 		88EB91001A44B7350019442B /* SoundListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB90FF1A44B7350019442B /* SoundListViewController.swift */; };
@@ -52,6 +53,7 @@
 		88D404781A58AD45007FC77C /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76.png"; path = "../../Icon-76.png"; sourceTree = "<group>"; };
 		88D404791A58AD45007FC77C /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "../../Icon-76@2x.png"; sourceTree = "<group>"; };
 		88D4047A1A58AD45007FC77C /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "../../iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		88D6EDE01A6787B1001BCF0D /* SoundBoard backbacground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SoundBoard backbacground.png"; sourceTree = "<group>"; };
 		88EB90F51A44B7350019442B /* Sound Bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sound Bar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EB90F91A44B7350019442B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88EB90FA1A44B7350019442B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		88EB90F71A44B7350019442B /* Sound Bar */ = {
 			isa = PBXGroup;
 			children = (
+				88D6EDE01A6787B1001BCF0D /* SoundBoard backbacground.png */,
 				88EB911D1A44BEA30019442B /* Rocky.m4a */,
 				88EB91231A453CFC0019442B /* Sound.swift */,
 				88EB90FA1A44B7350019442B /* AppDelegate.swift */,
@@ -244,6 +247,7 @@
 				88D4047E1A58AD45007FC77C /* Icon-40.png in Resources */,
 				88EB91031A44B7350019442B /* Main.storyboard in Resources */,
 				88D404841A58AD45007FC77C /* Icon-76@2x.png in Resources */,
+				88D6EDE11A6787B1001BCF0D /* SoundBoard backbacground.png in Resources */,
 				88D4047D1A58AD45007FC77C /* Icon-29@3x.png in Resources */,
 				88D4047F1A58AD45007FC77C /* Icon-40@2x.png in Resources */,
 				88D404811A58AD45007FC77C /* Icon-60@2x.png in Resources */,
