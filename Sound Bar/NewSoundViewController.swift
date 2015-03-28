@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import CoreData
 
+
 class NewSoundViewController: UIViewController {
 
     required init(coder aDecoder: NSCoder) {
@@ -55,6 +56,8 @@ class NewSoundViewController: UIViewController {
         //Let's Go!
         
         RecordActivityIndicator.hidesWhenStopped = true
+
+        
         
     }
     //function happens when ever save buton is clicked
@@ -95,7 +98,7 @@ class NewSoundViewController: UIViewController {
             RecordActivityIndicator.stopAnimating()
             RecordActivityIndicator.hidesWhenStopped = true
              self.audioRecorder.stop()
-             self.recordButton.setTitle("RECORD", forState: UIControlState.Normal)
+             self.recordButton.setTitle(" 👉 RECORD 👈 ", forState: UIControlState.Normal)
             
         } else {
             //starts the recoding
@@ -105,7 +108,7 @@ class NewSoundViewController: UIViewController {
             
             self.audioRecorder.record()
             
-            self.recordButton.setTitle("Finish Recording", forState: UIControlState.Normal)
+            self.recordButton.setTitle("✋ Stop Recording ✋", forState: UIControlState.Normal)
             RecordActivityIndicator.startAnimating()
             
         }

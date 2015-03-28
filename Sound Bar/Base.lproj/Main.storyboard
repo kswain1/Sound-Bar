@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8NA-0f-uuS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8NA-0f-uuS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -68,8 +68,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter sound name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LtJ-EH-ucy">
-                                <rect key="frame" x="20" y="90" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter sound name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LtJ-EH-ucy">
+                                <rect key="frame" x="20" y="190" width="560" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="boH-cG-eKx"/>
@@ -78,15 +78,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bp-xj-u20">
-                                <rect key="frame" x="20" y="150" width="560" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bp-xj-u20">
+                                <rect key="frame" x="20" y="252" width="560" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="5k9-MQ-GZn"/>
                                     <constraint firstAttribute="height" constant="30" id="Zi7-lm-rLP"/>
                                 </constraints>
-                                <state key="normal" title="RECORD">
+                                <state key="normal" title="👉 RECORD 👈">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5k9-MQ-GZn"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="recordTapped:" destination="6tD-gQ-ss3" eventType="touchUpInside" id="Yk1-hZ-E6F"/>
                                 </connections>
@@ -117,11 +122,12 @@
                                 </items>
                             </navigationBar>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" placeholderIntrinsicWidth="20" placeholderIntrinsicHeight="20" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6bo-dV-ZKm">
-                                <rect key="frame" x="290" y="200" width="20" height="20"/>
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.71764092089999998" green="0.85472792239999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="LtJ-EH-ucy" firstAttribute="leading" secondItem="WMg-fZ-G0w" secondAttribute="leadingMargin" constant="4" id="BCV-6A-9ZF"/>
                             <constraint firstItem="LtJ-EH-ucy" firstAttribute="leading" secondItem="WMg-fZ-G0w" secondAttribute="leading" constant="20" id="E0k-YL-kQU"/>
                             <constraint firstItem="1bp-xj-u20" firstAttribute="leading" secondItem="WMg-fZ-G0w" secondAttribute="leading" constant="20" id="J8v-jK-1hZ"/>
                             <constraint firstItem="LtJ-EH-ucy" firstAttribute="top" secondItem="aPb-VH-NX4" secondAttribute="bottom" constant="28" id="Mfk-tm-0qc"/>
@@ -129,23 +135,36 @@
                             <constraint firstItem="LtJ-EH-ucy" firstAttribute="leading" secondItem="WMg-fZ-G0w" secondAttribute="leading" constant="20" id="Tir-eZ-ygi"/>
                             <constraint firstItem="aPb-VH-NX4" firstAttribute="top" secondItem="WMg-fZ-G0w" secondAttribute="topMargin" constant="8" id="Twg-qy-pFe"/>
                             <constraint firstItem="aPb-VH-NX4" firstAttribute="top" secondItem="WMg-fZ-G0w" secondAttribute="top" id="YRw-QF-zJx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LtJ-EH-ucy" secondAttribute="trailing" constant="4" id="YYl-IE-4kc"/>
                             <constraint firstItem="6bo-dV-ZKm" firstAttribute="top" secondItem="1bp-xj-u20" secondAttribute="bottom" constant="8" id="Zkb-kT-ZCD"/>
                             <constraint firstItem="1bp-xj-u20" firstAttribute="top" secondItem="LtJ-EH-ucy" secondAttribute="bottom" constant="30" id="bgs-ti-mIC"/>
-                            <constraint firstItem="LtJ-EH-ucy" firstAttribute="top" secondItem="aPb-VH-NX4" secondAttribute="bottom" constant="35" id="liL-TW-xwO"/>
+                            <constraint firstItem="1bp-xj-u20" firstAttribute="centerX" secondItem="6bo-dV-ZKm" secondAttribute="centerX" constant="15" id="g3E-Pq-4yi"/>
+                            <constraint firstItem="6bo-dV-ZKm" firstAttribute="top" secondItem="1bp-xj-u20" secondAttribute="bottom" constant="8" id="kgx-Lw-yv3"/>
+                            <constraint firstAttribute="centerY" secondItem="6bo-dV-ZKm" secondAttribute="centerY" id="q2b-g6-1tt"/>
                             <constraint firstItem="6bo-dV-ZKm" firstAttribute="top" secondItem="1bp-xj-u20" secondAttribute="bottom" constant="35" id="rbc-vD-hSu"/>
                             <constraint firstAttribute="trailing" secondItem="1bp-xj-u20" secondAttribute="trailing" constant="20" id="rml-jM-HRD"/>
                             <constraint firstItem="LtJ-EH-ucy" firstAttribute="top" secondItem="aPb-VH-NX4" secondAttribute="bottom" constant="35" id="tBL-Yc-wT4"/>
                             <constraint firstAttribute="centerX" secondItem="6bo-dV-ZKm" secondAttribute="centerX" id="uPV-WQ-AvY"/>
                             <constraint firstItem="1bp-xj-u20" firstAttribute="leading" secondItem="WMg-fZ-G0w" secondAttribute="leading" constant="20" id="vFb-jy-zF9"/>
+                            <constraint firstAttribute="centerY" secondItem="6bo-dV-ZKm" secondAttribute="centerY" id="vq7-kt-dgO"/>
                             <constraint firstItem="LtJ-EH-ucy" firstAttribute="top" secondItem="aPb-VH-NX4" secondAttribute="bottom" constant="20" id="wAc-lK-PDd"/>
                             <constraint firstItem="aPb-VH-NX4" firstAttribute="leading" secondItem="WMg-fZ-G0w" secondAttribute="leading" id="xHt-xF-0nJ"/>
                             <constraint firstAttribute="trailing" secondItem="aPb-VH-NX4" secondAttribute="trailing" id="xfV-hj-mMs"/>
+                            <constraint firstItem="1bp-xj-u20" firstAttribute="top" secondItem="LtJ-EH-ucy" secondAttribute="bottom" constant="32" id="yMa-sz-RS5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="E0k-YL-kQU"/>
+                                <exclude reference="Mfk-tm-0qc"/>
                                 <exclude reference="T9o-vi-7jG"/>
+                                <exclude reference="tBL-Yc-wT4"/>
+                                <exclude reference="wAc-lK-PDd"/>
+                                <exclude reference="bgs-ti-mIC"/>
+                                <exclude reference="g3E-Pq-4yi"/>
+                                <exclude reference="vFb-jy-zF9"/>
                                 <exclude reference="Zkb-kT-ZCD"/>
+                                <exclude reference="rbc-vD-hSu"/>
+                                <exclude reference="vq7-kt-dgO"/>
                             </mask>
                         </variation>
                     </view>
