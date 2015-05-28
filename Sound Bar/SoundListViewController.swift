@@ -38,7 +38,7 @@ class SoundListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         var request = NSFetchRequest(entityName: "Sound")
         
-        self.sounds = context.executeFetchRequest(request, error: nil) as [Sound]
+        self.sounds = context.executeFetchRequest(request, error: nil)! as [Sound]
 
         
     }
@@ -72,7 +72,8 @@ class SoundListViewController: UIViewController, UITableViewDelegate, UITableVie
         var sound = self.sounds[indexPath.row]
         var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
         if !(cell != nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")}
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
+        }
             
         cell!.textLabel.text = sound.name
         return cell!

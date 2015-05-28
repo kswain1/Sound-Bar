@@ -14,7 +14,7 @@ import CoreData
 class NewSoundViewController: UIViewController {
 
     required init(coder aDecoder: NSCoder) {
-        var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,NSSearchPathDomainMask.UserDomainMask , true) [0] as String
+        var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,NSSearchPathDomainMask.UserDomainMask , true) [0] as! String
         
         self.audioURL = NSUUID().UUIDString + ".m4a"
         var PathComponents = [baseString, self.audioURL]
@@ -68,11 +68,12 @@ class NewSoundViewController: UIViewController {
     @IBAction func saveTapped(sender: AnyObject) {
         
         //save sound to CoreData
-        var context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
+        var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
        
         //create Sound Object
+        
         //Sound() = empty sound obj.
-        var sound = NSEntityDescription.insertNewObjectForEntityForName("Sound", inManagedObjectContext: context) as Sound
+        var sound = NSEntityDescription.insertNewObjectForEntityForName("Sound", inManagedObjectContext: context) as! Sound
         
         sound.name = self.addSoundTextField.text
         sound.url = self.audioURL
@@ -82,7 +83,6 @@ class NewSoundViewController: UIViewController {
         
         
     
-        
         //Dismiss the ViewController
         self.dismissViewControllerAnimated(true, completion: nil)
     }
